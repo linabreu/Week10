@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body>
+        <div class = "container">
+            <!---start form-->
+            <div class="card-body">
+                <div class = "form-control">
+                    <div class="row" style="background-image:url('images/produce.jpg'); height: 150px;  background-size: cover;  background-position: center;">
+                            <h1 class="text-center">Grocery List</h1>
+                    </div>
+                    <div class="row">
+                            <div class = "col-sm-1"></div>
+                            <div class = "col-sm-5">
+                                    <label for="shoppingDate" class="mt-2 mb-2">Shopping Date:</label>
+                                    <input type="date" class="form-control ml-3 mr-3" id="shoppingDate">
+                            </div>
+                            <div class="col-sm-5">
+                                <label for="store" class="mt-2 mb-2">Store</label>
+                                <select class="form-select form-select-md" aria-label=".form-select-sm example" id="store" name="store">
+                                   <option selected>Select your shopping destination</option>
+                                  <option value="costco">Costco</option>
+                                  <option value="kroger">Kroger</option>
+                                  <option value="safeway">Safeway</option>
+                                  <option value="samsClub">Sam's Club</option>
+                                  <option value="traderJoes">Trader Joe's</option>
+                                  <option value="walmart">Walmart</option>
+                                  <option value="wholefoods">Whole Foods</option>
+                                </select>
+                            </div>
+                            <div class = "col-sm-1"></div>
+                    </div>
+                    <div class = "row">
+                        <div class = "col-sm-1"></div>
+                        <div class = "col-sm-5">
+                            <label for="itemToPurchase" class="mt-2 mb-2">Item to Purchase</label>
+                            <input type="text" class="form-control" id="itemToPurchase" placeholder="Enter your item here">
+                        </div>
+                        <div class = "col-sm-2">
+                            <label for="quantity" class="mt-2 mb-2">Quantity</label>
+                            <input type="number" class="form-control" id="quantity">
+                        </div>
+                        <div class = "col-sm-3">
+                            <label for="department" class="mt-2 mb-2">Department</label>
+                            <select class="form-select form-select-md" aria-label=".form-select-sm example" id="department" name="department">
+                                <option selected>Select a grocery department</option>
+                                <option value="dairy">Bakery</option>
+                                <option value="beverages">Beverage</option>
+                                <option value="breakfast">Breakfast</option>
+                                <option value="deli">Deli</option>
+                                <option value="frozen">Frozen</option>
+                                <option value="healthWellness">Health & Wellness</option>
+                                <option value="meatSeafood">Meat & Seafood</option>
+                                <option value="pantry">Pantry</option>
+                                <option value="produce">Produce</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class = "col-sm-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5"></div>
+                        <div class="col-sm-2">
+                        <button id="addBtn" class="btn btn-danger form-control mt-5 mb-3">Add Item</button>
+                        </div>
+                        <div class="col-sm-5"></div>
+                    </div>
+                </div>
+
+        <!---end form-->
+
+
+        <!---start table -->
+        <table class="table table-bordered" id ="groceryTable">
+            <h1 id="tableTitle">Grocery List</h1>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Department</th>
+              </tr>
+          </table>
+        </div>
+
+        <script src ="groceryList.js"></script>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src ="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </body>
+</html>
