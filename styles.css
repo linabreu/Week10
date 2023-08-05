@@ -1,0 +1,23 @@
+.bigHeader {
+    font-family: 'Lilita One', cursive;
+}
+
+.medHeader {
+    font-family: 'Lilita One', cursive;
+}
+
+body {
+    background-color: #67733C;
+}
+
+.redButton {
+    background-color: #F27E63;
+}
+
+table{
+    background-color:#D7D9D9;
+}
+
+.groceryForm {
+    background-color: #D6D984;;
+}

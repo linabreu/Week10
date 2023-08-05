@@ -10,17 +10,19 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/main.css">
+       <!--<link rel="stylesheet" href="styles/main.css">-->
+       <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+       <link rel="stylesheet" href ="styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
-    <body class="bg-primary">
+    <body>
         <div class = "container ">
             <!---start form-->
             <div class="card-body">
-                <div class = "form-control bg-secondary border border-dark shadow-lg mt-5">
+                <div class = "form-control border border-dark shadow-lg mt-5 groceryForm">
                     <div class="row" style="background-image:url('images/produce.jpg'); height: 150px;  background-size: cover;  background-position: center;">
-                            <h1 class="text-center mt-5" style="font-family: 'Lilita One', cursive;">Grocery List</h1>
+                            <h1 class="text-center mt-5 bigHeader">Grocery List</h1>
                     </div>
                     <div class="row">
                             <div class = "col-sm-1"></div>
@@ -74,7 +76,7 @@
                     <div class="row">
                         <div class="col-sm-5"></div>
                         <div class="col-sm-2">
-                        <button id="addBtn" class="btn btn-warning form-control mt-5 mb-3">Add Item</button>
+                        <button id="addBtn" class="form-control mt-5 mb-3 redButton">Add Item</button>
                         </div>
                         <div class="col-sm-5"></div>
                     </div>
@@ -84,11 +86,20 @@
 
 
             <!---start table -->
+            <div class = "row">
+                <div class = "col-sm-3"></div>
+                <div class = "col-sm-6">
+                    <h2 id="tableTitle" class="text-center mt-5 medHeader">Grocery List</h2>
+                    <h4 id="storeTitle" class="text-center">Shopping At:</h4>
+                </div>
+                <div class = "col-sm-3"></div>
+
+            </div>
             <div class="row">
             <div class = "col-sm-3"></div>
             <div class = "col-sm-6">
-            <table class="table table-bordered table-light shadow-lg" id ="groceryTable">
-                <h2 id="tableTitle" class="text-center mt-5" style="font-family: 'Lilita One', cursive;">Grocery List</h2>
+            <table class="table table-bordered table-secondary shadow-lg" id ="groceryTable">
+
                 <tr>
                     <th scope="col">Item</th>
                     <th scope="col">Quantity</th>
